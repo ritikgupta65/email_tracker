@@ -3,7 +3,8 @@ import { resolve } from 'path';
 
 const AIRTABLE_API_KEY = process.env.AIRTABLE_API_KEY;
 const BASE_ID = process.env.AIRTABLE_BASE_ID;
-const TABLE_NAME = 'Opens';
+// const TABLE_NAME = 'Opens';
+const TABLE_NAME = process.env.TABLE_NAME
 
 export default async function handler(req, res) {
   const { id = 'unknown' } = req.query;
